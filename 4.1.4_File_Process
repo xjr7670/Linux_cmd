@@ -1,0 +1,20 @@
+文件处理命令：ln
+
+ln -s /etc/issue /tmp/issue.soft  #创建文件/etc/issue的软链接/tmp/issue.soft
+ln /etc/issue /tem/issue.hard  # 创建文件/etc/issue/的硬连接/tmp/issue.hard
+
+软链接和硬链接的区别：
+
+软链接（类似于windows下的快捷方式）->
+lrwxrwxrwx 其文件类型是l 表明软链接，其权限都是rwx
+
+硬链接（作用类似于copy＋同步更新）->
+在对硬连接进行操作时，会同步更新到原文件
+
+主要区别：当原文件被删除时，软链接将不可用，但硬链接是可以用的。硬链接不能跨分区，并且不能针对目录使
+
+
+如何判断硬链接：
+
+硬链接的i节点与原文件的i节点是相同的。可以通过使用ls -i 查看
+

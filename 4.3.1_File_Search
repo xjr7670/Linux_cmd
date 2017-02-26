@@ -1,0 +1,25 @@
+## 文件搜索命令：find
+
+所在路径：/bin/find
+语法：find [搜索范围] [匹配条件]
+
+根据名字搜索，在/etc下查找名为init的文件
+find /etc -name init
+
+根据文件大小搜索，在根目录下查找大于100MB的文件：
+find / -size +204800
+  +n 大于  -n 小于 n 等于
+
+在根目录下查找所有者为shenchao的文件
+find / -user shenchao
+
+根据所属组查找：
+find / -group
+
+
+在/etc下查找5分钟内被修改过属性的文件和目录
+find /etc -cmin -5
+
+-amin 访问时间 access
+-cmin 文件属性 change
+-mmin 文件内容 modify

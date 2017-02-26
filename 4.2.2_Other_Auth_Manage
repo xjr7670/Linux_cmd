@@ -1,0 +1,21 @@
+## 权限管理命令：chown
+英文原意：change file ownership
+所在路径：/bin/chown
+
+语法：chown [用户] [文件或目录]
+
+示例：chown shenchao fengjie
+
+只有root可以更改文件所有者
+
+
+
+## 权限掩码：umask
+英文原意：the user file-creation mask
+这是个Shell内置命令
+
+语法：umask [-S]
+
+-S 以rwx形式显示新建文件默认权限
+
+用于显示、设置文件的默认权限

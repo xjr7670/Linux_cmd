@@ -1,0 +1,25 @@
+## RPM包的安装
+
+rpm -ivh 包全名
+
+-i (install) 安装
+-v (verbose) 显示详细信息
+-h (hash)    显示进度
+--nodeps     不检测依赖性
+-U (update)  升级
+
+## RPM包的查询
+
+rpm -q 包名
+
+-q (query)   查询
+-a (all)     与-q同时使用。查询所有的相关包
+-i (information) 与-q同时使用。查询软件信息
+-p ()            查询未安装包信息
+-l (list)    列表。与-q同时使用。查询包安装位置
+
+# rpm -qf 系统文件名
+-f (file)    与-q同时使用。查询系统谁的属于哪个软件包
+
+# rpm -qR 包名
+-R           查询包依赖性

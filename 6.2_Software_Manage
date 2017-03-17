@@ -23,3 +23,16 @@ rpm -q 包名
 
 # rpm -qR 包名
 -R           查询包依赖性
+
+
+# rpm -V 包名
+-V (Verify) 验证文件。如果有被修改，则会有提示信息。如无，则无提示
+
+
+## RPM包中文件提取
+
+rpm2cpio 包全名 
+cpio -idv 文件绝对路径
+
+两者结合使用：
+rpm2cpio 包全名 | cpio -idv 文件绝对路径

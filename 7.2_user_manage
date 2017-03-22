@@ -1,0 +1,23 @@
+## 增加新用户 useradd
+
+useradd [参数] [用户qk ]
+
+-g 指定初始组
+-c 增加说明
+-d 指定家目录
+-u 指定UID
+
+-----------------------------
+
+## 修改用户密码 passwd
+
+passwd [参数] [用户名]
+
+不加参数和户名的时候表示修改当前用户的密码
+
+
+* passwd -S lamp  <== 查看用户lamp密码状态
+* passwd -l lamp  <== 锁定用户lamp的密码
+* passwd -u lamp  <== 解锁用户lamp的密码
+* passwd --stdin lamp <== 使用字符串作为用户的密码
+  例如   echo "123" | passwd --stdin lamp

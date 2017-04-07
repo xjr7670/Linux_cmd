@@ -1,0 +1,25 @@
+## RPM服务的管理－独立服务管理
+
+/etc/init.d/        启动脚本位置
+/etc/sysconfig/     初始化环境配置文件位置
+/etc/               配置文件位置
+/etc/xinetd.conf    xinetd配置文件
+/etc/xinetd.d/      基于xinetd服务的启动脚本
+/var/lib/           服务产生的数据放在这里
+/var/log/           日志     
+
+## 独立服务的启动
+
+/etc/initd/独立服务名 start|stop|status|restart
+
+service 独立服务名 start|stop|restart|status
+    service在fedora24里面已经更改成了systemctl
+    这个命令是Red Hat系统专有的
+
+# 独立服务的自启动
+
+chkconfig  [--level 运行级别] [独立服务名] [on|off]
+
+修改/etc/rc.d/rc.local 文件
+
+使用ntsysv命令管理自启动

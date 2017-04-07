@@ -1,0 +1,7 @@
+## 基于xinetd服务管理
+
+目前的Linux中，基于xinetd的服务已经越来越少了。本章主要为了解
+# 安装xinetd与telnet
+
+dnf -y install xinetd
+dnf -y install telnet-server
